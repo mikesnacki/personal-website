@@ -4,6 +4,7 @@ import "./index.css"
 import Header from "../components/header"
 import Landing from "../components/landing"
 import About from "../components/about"
+import Experience from "../components/experience"
 
 class App extends React.Component {
 
@@ -13,6 +14,7 @@ class App extends React.Component {
                 <Header />
                 <Landing />
                 <About />
+                <Experience />
             </div>
         )
     }

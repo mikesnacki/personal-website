@@ -24,6 +24,10 @@ li {
   font-size: calc(10px + 0.5vw);
 }
 
+svg{
+  margin: 0 auto;
+}
+
 /*----------------------------- GENERAL STYLING -----------------------------*/
 
 .flex-row{
@@ -48,6 +52,9 @@ li {
   justify-content: space-between;
 }
 
+.center-vertically{
+  margin: auto;
+}
 
 /*----------------------------- HEADER STYLING -----------------------------*/
 
@@ -144,10 +151,17 @@ li {
   color: #ff9c91;
 }
 
+
 /*----------------------------- LANDING PAGE -----------------------------*/
 
+@keyframes pulse {
+  from {opacity: 0;}
+  to {opacity: 80;}
+}
+
 .landing-container{
-  display: block;
+  display: inline-flex;
+  flex-direction: column;
   background-color: #2d3561;
   height: 100vh;
   width: 100%;
@@ -162,6 +176,46 @@ li {
   text-align: center;
 }
 
+.scroll-container{
+  line-height: normal;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.scroll1, .scroll2, .scroll3{
+  margin: 0 auto;
+  opacity: 50%;
+  padding: 0.75vh;
+  border: 3px solid white;
+  border-top: none;
+  border-right: none;
+  width: 10px;
+  height: 10px;
+  transform: rotate(-45deg)
+}
+
+.scroll1{
+  animation-delay: 1.0s;
+  animation: pulse 2.0s ease-in-out;
+  animation-delay: 1.0s;
+  animation-iteration-count: infinite;
+}
+
+.scroll2{
+  animation-delay: 1.5s;
+  animation: pulse 2.0s ease-in-out;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+.scroll3{
+  animation-delay: 2.0s;
+  animation: pulse 2.0s ease-in-out;
+  animation-delay: 2.0s;
+  animation-iteration-count: infinite;
+}
+
+
 /*----------------------------- ABOUT PAGE -----------------------------*/
 
 .about-container{
@@ -171,10 +225,87 @@ li {
 }
 
 .about{
-  padding: 20vh 22.5vw;
+  padding: 25vh 22.5vw;
 }
 
-.text-about{
+.about-visible{
+  
   color:#fae3d9;
+  -webkit-transition: opacity 1s ease-in;
+  -moz-transition: opacity 1s ease-in;
+   -ms-transition: opacity 1s ease-in;
+    -o-transition: opacity 1s ease-in;
+       transition: opacity 1s ease-in;
 }
 
+.about-hidden{
+  opacity: 0;
+  display: hidden;
+}
+
+/*----------------------------- EXPERIENCE PAGE -----------------------------*/
+
+@keyframes gradient {
+  0% {
+    background: radial-gradient(circle at center, rgba( 23,105,163, 0 ) 0%, #fff 0%, #fff 100%);
+  }
+  25% {
+    background: radial-gradient(circle at center, rgba( 23,105,163, 0.3 ) 24%, #fff 25%, #fff 100%);
+  }
+  50% {
+    background: radial-gradient(circle at center, rgba( 23,105,163, 0.5 ) 49%, #fff 50%, #fff 100%);
+  }
+  75% {
+    background: radial-gradient(circle at center, rgba( 23,105,163, 0.8 ) 74%, #fff 75%, #fff 100%);
+  }
+  100% {
+    color: #fff;
+    background: radial-gradient(circle at center, #1769a3 99%, #fff 100%, #fff 100%);
+  }
+}
+
+.experience-container{
+  color: #17A398;
+  display: block;
+  background-color: #f2f4f6;
+  height: 100vh;
+  padding: 10vh 15vw;
+}
+
+
+.btn-experience{
+  background-image: radial-gradient( rgb(23,163,152, 0.3), rgba(23,163,152,0.2));
+  border: none;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin-top: -8px;
+}
+
+.btn-experience:hover{
+  background-image: radial-gradient( rgb(23,163,152, 0.9), rgba(23,163,152,0.8));
+}
+
+.btn-experience:active{
+  animation: gradient 00ms;
+}
+
+.dtl-exp{
+  padding: 0;
+}
+
+.exp-header{
+  margin-top: 5vh;
+  margin-bottom: 0;
+  display: block;
+}
+
+.expert h5, .proficient h5, .capable h5{
+  margin-top:0.5vh;
+}
+
+.expert .flex-col:hover,
+.proficient .flex-col:hover, 
+.capable .flex-col:hover{
+  color:  rgb(23,163,152, 0.6);
+ }

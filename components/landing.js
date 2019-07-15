@@ -21,6 +21,11 @@ function Landing() {
                     {welcome[3]}
                 </h2>
             </Typing>
+            <div className="scroll-container">
+                <div className="scroll1 align-center"></div>
+                <div className="scroll2 align-center"></div>
+                <div className="scroll3 align-center"></div>
+            </div>
         </div >
     )
 }

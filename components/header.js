@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react"
-import { useWindowDimensions } from "./windowDim"
+import React, { useState } from "react"
+import { useWindowDimensions } from "../utilhooks/windowDim"
 
 export default function Header() {
 
@@ -10,15 +10,15 @@ export default function Header() {
   const displayed = display === true ? "displayed" : "hidden"
 
   const links = [
-    <li key={1}><a>About</a></li>,
-    <li key={2}><a>Experience</a></li>,
+    <li key={1}><a href="#about">About</a></li>,
+    <li key={2}><a href="#experience">Experience</a></li>,
     <li key={3}><a>Portfolio</a></li>,
     <li key={4}><a>Contact</a></li>
   ]
 
   return (
 
-    <div className="container">
+    <div className="container" >
       <header className="flex-row header space-around">
         <h1>Mike Snacki</h1>
         {width >= collapseWidth
