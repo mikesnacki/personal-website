@@ -4,10 +4,11 @@ import { useWindowDimensions } from "../utilhooks/windowDim"
 export default function Header() {
 
   const { width } = useWindowDimensions();
-  const collapseWidth = 600;
+  const collapseWidth = 700;
 
-  const [display, activateDisplay] = useState(false)
-  const displayed = display === true ? "displayed" : "hidden"
+  const [navDisplay, activateNavDisplay] = useState(false)
+  const navDisplayed = navDisplay === true ? "displayed" : "hidden"
+  const activated = navDisplay && "displayed"
 
   const links = [
     <li key={1}><a href="#about">About</a></li>,
@@ -25,8 +26,8 @@ export default function Header() {
           ? <ul className="nav-links">{links}</ul >
           : <div>
             <button
-              onClick={() => activateDisplay(!display)}
-              className={`menu-bar ${displayed}`}>
+              onClick={() => activateNavDisplay(!navDisplay)}
+              className={`menu-bar ${activated}`}>
               <div className="line1"></div>
               <div className="line2"></div>
               <div className="line3"></div>
@@ -34,9 +35,9 @@ export default function Header() {
           </div>}
       </header>
       <ul
-        onMouseLeave={() => activateDisplay(!display)}
-        className={`menu-dropdown-${displayed}`}>
-        {display === true && width < collapseWidth && links}
+        onMouseLeave={() => activateNavDisplay(!navDisplay)}
+        className={`menu-dropdown-${navDisplayed}`}>
+        {navDisplay === true && width < collapseWidth && links}
       </ul>
     </div >
 
