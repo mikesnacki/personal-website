@@ -29,7 +29,7 @@ export default function Experience() {
         }
     }, { once: true });
 
-    const iconSize = width / 50 + 20;
+    const iconSize = width / 40 + 20;
 
     const jobsArray = ["SUNY Brockport",
         "Citi",

@@ -28,6 +28,29 @@ svg{
   margin: 0 auto;
 }
 
+h1{
+  font-size: calc(40px - 0.8vw);
+}
+
+h2{
+  font-size: calc(39px - 0.8vw);
+}
+
+h3{
+  font-size: calc(38px - 0.8vw);
+}
+
+h4{
+  font-size: calc(37px - 0.8vw);
+}
+
+h5{
+  font-size: calc(35px - 0.8vw);
+}
+
+p{
+  font-size: calc(33px - 0.8vw);
+}
 /*----------------------------- GENERAL STYLING -----------------------------*/
 
 .flex-row{
@@ -221,7 +244,7 @@ svg{
 .about-container{
   display: block;
   background-color: #17A398;
-  height: 100vh;
+  height: minmax(100%, 100vh);
 }
 
 .about{
@@ -267,7 +290,7 @@ svg{
   color: #17A398;
   display: block;
   background-color: #f2f4f6;
-  height: 100vh;
+  height: minmax(100%, 100vh);
   padding: 10vh 15vw;
 }
 
