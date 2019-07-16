@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useWindowDimensions } from "../utilhooks/windowDim"
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import {
     FaFileExcel,
     FaTable,
@@ -18,7 +18,18 @@ import {
 export default function Experience() {
 
     const { width, height } = useWindowDimensions();
-    const iconSize = width / 50 + 12;
+    const [jobs, setJobs] = useState(6)
+    const [inView, activateView] = useState(false)
+    const visible = (inView === true) ? "visible" : "hidden";
+
+    window.addEventListener("scroll", function () {
+        const scrollDepth = window.scrollY;
+        if (scrollDepth - height < 10) {
+            activateView(true);
+        }
+    }, { once: true });
+
+    const iconSize = width / 50 + 20;
 
     const jobsArray = ["SUNY Brockport",
         "Citi",
@@ -56,96 +67,114 @@ export default function Experience() {
 
     ]
 
-    const color = "rgb(23, 163, 152, 0.2)";
-    const [jobs, jobsSelector] = useState(6)
+    const barFill = (jobs / (DutiesArray.length - 1)) * 100
+
+    const changeColor = keyframes`
+            from {background: rgb(23, 163, 152, 0.05);
+            color: rgb(23, 163, 152, 0.05);
+            }
+            to {background: rgb(23, 163, 152, 0.4);
+                color: rgb(23, 163, 152, 0.4);       
+            }
+        `
 
     const Bar = styled.div`
-    &{
-        background: ${color};
-        height: 4px;
-        border-radius: 50px;
-        position: relative;
-    }
-    &:after{
-
-        position: absolute;
-    }
-    `
-    useEffect(() => {
-        return () => {
-            console.log(this.i)
-        };
-    })
+        &{
+            background: rgb(23, 163, 152, 0.1);
+            height: 4px;
+            border-radius: 50px;
+            position: relative;
+            border: 0.5px solid rgb(23, 163, 152, 0.3);
+            border-radius: 25px;
+        }
+        &:after{
+            content: "/A";
+            height: 4px;
+            overflow: hidden;
+            width:${barFill}%;
+            background: rgb(23, 163, 152, 0.4);
+            position: absolute;
+            animation: ${changeColor} 0.75s linear;
+        }
+        `
 
     return (
         < div
             className="experience-container"
             id="experience"
         >
-            <div className="align-center">
-                <h2 className="align-center">Career Timeline</h2>
-                <Bar className="flex-row space-around">
-                    {[...Array(7)].map((x, i) =>
-                        <button className="btn-experience" key={i} onClick={() => jobsSelector(i)}></button>
-                    )}
-                </Bar>
+            <div className={`${visible}`}>
+                <div className="align-center">
+                    <h2 className="align-center">Career Timeline</h2>
+                    <Bar className="flex-row space-around">
+                        {[...Array(7)].map((x, i) =>
+                            <button
+                                className="btn-experience"
+                                key={i}
+                                value={i}
+                                onClick={() => setJobs(i)}
 
-                <h3 className="dtl-exp">{jobsArray[jobs]}</h3>
-                <h4 className="dtl-exp">{titlesArray[jobs]}</h4>
-                <h5 className="dtl-exp">{datesArray[jobs]}</h5>
-                <p className="dtl-exp">{DutiesArray[jobs]}</p>
-            </div>
+                            ></button>
+                        )}
+                    </Bar>
+                    <h3 className="dtl-exp">{jobsArray[jobs]}</h3>
+                    <h4 className="dtl-exp">{titlesArray[jobs]}</h4>
+                    <h5 className="dtl-exp">{datesArray[jobs]}</h5>
+                    <p className="dtl-exp">{DutiesArray[jobs]}</p>
+                </div>
 
 
-            <h4 className="align-center exp-header">Expert</h4>
-            <div className="flex-row expert">
-                <div className="flex-col">
-                    <h5 className="align-center">Excel</h5>
-                    <FaFileExcel size={iconSize} />
+                <h4 className="align-center exp-header">Expert</h4>
+                <div className="flex-row expert">
+                    <div className="flex-col">
+                        <h5 className="align-center">Excel</h5>
+                        <FaFileExcel size={iconSize} />
+                    </div>
+                    <div className="flex-col">
+                        <h5 className="align-center">Modeling</h5>
+                        <FaTable size={iconSize} />
+                    </div>
+                    <div className="flex-col">
+                        <h5 className="align-center">Analytics</h5>
+                        <FaChartLine size={iconSize} />
+                    </div>
                 </div>
-                <div className="flex-col">
-                    <h5 className="align-center">Modeling</h5>
-                    <FaTable size={iconSize} />
+                <h4 className="align-center exp-header">Proficient</h4>
+                <div className="flex-row proficient">
+                    <div className="flex-col">
+                        <h5 className="align-center">HTML5</h5>
+                        <FaHtml5 size={iconSize} />
+                    </div>
+                    <div className="flex-col">
+                        <h5 className="align-center">CSS3</h5>
+                        <FaCss3Alt size={iconSize} />
+                    </div>
+                    <div className="flex-col">
+                        <h5 className="align-center">JavaScript</h5>
+                        <FaJsSquare size={iconSize} />
+                    </div>
+                    <div className="flex-col">
+                        <h5 className="align-center">Googling</h5>
+                        <FaGoogle size={iconSize} />
+                    </div>
                 </div>
-                <div className="flex-col">
-                    <h5 className="align-center">Analytics</h5>
-                    <FaChartLine size={iconSize} />
-                </div>
-            </div>
-            <h4 className="align-center exp-header">Proficient</h4>
-            <div className="flex-row proficient">
-                <div className="flex-col">
-                    <h5 className="align-center">HTML5</h5>
-                    <FaHtml5 size={iconSize} />
-                </div>
-                <div className="flex-col">
-                    <h5 className="align-center">CSS3</h5>
-                    <FaCss3Alt size={iconSize} />
-                </div>
-                <div className="flex-col">
-                    <h5 className="align-center">JavaScript</h5>
-                    <FaJsSquare size={iconSize} />
-                </div>
-                <div className="flex-col">
-                    <h5 className="align-center">Googling</h5>
-                    <FaGoogle size={iconSize} />
-                </div>
-            </div>
-            <h4 className="align-center exp-header">Capable</h4>
-            <div className="flex-row capable">
-                <div className="flex-col">
-                    <h5 className="align-center">React</h5>
-                    <FaReact size={iconSize} />
-                </div>
-                <div className="flex-col">
-                    <h5 className="align-center">Databases</h5>
-                    <FaDatabase size={iconSize} />
-                </div>
-                <div className="flex-col">
-                    <h5 className="align-center">Python</h5>
-                    <FaPython size={iconSize} />
+                <h4 className="align-center exp-header">Capable</h4>
+                <div className="flex-row capable">
+                    <div className="flex-col">
+                        <h5 className="align-center">React</h5>
+                        <FaReact size={iconSize} />
+                    </div>
+                    <div className="flex-col">
+                        <h5 className="align-center">Databases</h5>
+                        <FaDatabase size={iconSize} />
+                    </div>
+                    <div className="flex-col">
+                        <h5 className="align-center">Python</h5>
+                        <FaPython size={iconSize} />
+                    </div>
                 </div>
             </div>
         </div >
     )
 }
+
