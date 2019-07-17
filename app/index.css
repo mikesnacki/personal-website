@@ -9,6 +9,7 @@ body, html{
 a{
   text-decoration: none;
   color: #eee;
+  margin: 0 0 ;
 }
 
 a:hover {
@@ -16,7 +17,7 @@ a:hover {
 }
 
 ul {
-  padding-left: 0;
+  padding: 0;
 }
 
 li {
@@ -148,11 +149,16 @@ p{
   background-color: #dadddf;
   z-index: 100;
   top: 4vh;
-  margin-top: 0;
-  padding: 4vh 3vw 2vh;;
+  margin: 0 auto;
+  padding: 4vh 3vw 2vh;
   display: block;
-  width:100%;
+  width:100vw;
   text-align: center;
+}
+
+.menu-dropdown-displayed{
+  margin: 0;
+  padding: 5.5vh 0 4vh;
 }
 
 .menu-dropdown-hidden{
