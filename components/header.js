@@ -22,7 +22,7 @@ export default function Header() {
     <div className="container" >
       <header className="flex-row header space-around">
         <h1>Mike Snacki</h1>
-        {width >= collapseWidth
+        {width >= collapseWidth || window.innerWidth <= collapseWidth
           ? <ul className="nav-links">{links}</ul >
           : <div>
             <button
