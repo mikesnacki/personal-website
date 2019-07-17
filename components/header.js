@@ -4,7 +4,7 @@ import { useWindowDimensions } from "../utilhooks/windowDim"
 export default function Header() {
 
   const { width } = useWindowDimensions();
-  const collapseWidth = 700;
+  const collapseWidth = 990;
 
   const [navDisplay, activateNavDisplay] = useState(false)
   const navDisplayed = navDisplay === true ? "displayed" : "hidden"
@@ -22,7 +22,7 @@ export default function Header() {
     <div className="container" >
       <header className="flex-row header space-around">
         <h1>Mike Snacki</h1>
-        {width >= collapseWidth || window.innerWidth <= collapseWidth
+        {width >= collapseWidth
           ? <ul className="nav-links">{links}</ul >
           : <div>
             <button
