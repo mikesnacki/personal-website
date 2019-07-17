@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import { useWindowDimensions } from "../utilhooks/windowDim"
+import useOnScreen from "../utilhooks/useOnScreen"
 import styled, { keyframes } from 'styled-components';
 import {
     FaFileExcel,
@@ -19,17 +20,13 @@ export default function Experience() {
 
     const { width, height } = useWindowDimensions();
     const [jobs, setJobs] = useState(6)
-    const [inView, activateView] = useState(false)
-    const visible = (inView === true) ? "visible" : "hidden";
+    const expRef = useRef();
+    const expOnSCreen = useOnScreen(expRef, "-200px")
 
-    window.addEventListener("scroll", function () {
-        const scrollDepth = window.scrollY;
-        if (scrollDepth - height < 10) {
-            activateView(true);
-        }
-    }, { once: true });
+    const expIsOnScreen = (expOnSCreen === true) ? "visible" : "hidden";
 
-    const iconSize = width / 40 + 20;
+
+    const iconSize = width / 20 + 12;
 
     const jobsArray = ["SUNY Brockport",
         "Citi",
@@ -102,8 +99,9 @@ export default function Experience() {
         < div
             className="experience-container"
             id="experience"
+            ref={expRef}
         >
-            <div className={`${visible}`}>
+            <div className={`${expIsOnScreen}`}>
                 <div className="align-center">
                     <h2 className="align-center">Career Timeline</h2>
                     <Bar className="flex-row space-around">

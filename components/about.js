@@ -1,26 +1,23 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { useWindowDimensions } from "../utilhooks/windowDim"
+import useOnScreen from "../utilhooks/useOnScreen"
 import { FaHome, FaUniversity, FaClock, FaTerminal } from 'react-icons/fa'
 
 export default function About() {
+    const aboutRef = useRef();
+    const aboutOnScreen = useOnScreen(aboutRef, "-200px")
     const { width, height } = useWindowDimensions();
     const iconSize = width / 20 + 12;
-    const [inView, activateView] = useState(false)
-    const visible = (inView === true) ? "visible" : "hidden";
+    const abOnScnreen = aboutOnScreen === true ? "visible" : "hidden"
 
-    window.addEventListener("scroll", function () {
-        const scrollDepth = window.scrollY;
-        if (scrollDepth - height < 10) {
-            activateView(true);
-        }
-    }, { once: true });
 
     return (
         < div
             className="about-container"
             id="about"
+            ref={aboutRef}
         >
-            <div className={`flex-row about space-around ${visible}`}>
+            <div className={`flex-row about space-around ${abOnScnreen}`}>
                 <div className={`flex-col`}>
                     <h2 className="align-center ">Live</h2>
                     <FaHome size={iconSize} />
@@ -42,6 +39,7 @@ export default function About() {
                     <p className="align-center">I enjoy working with Vanilla JavaScript, React, and Python</p>
                 </div>
             </div>
+
         </div >
     )
 }
