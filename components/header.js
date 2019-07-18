@@ -1,14 +1,18 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import { useWindowDimensions } from "../utilhooks/windowDim"
+import useOnClickOutside from "../utilhooks/useOnClickOutside"
 
 export default function Header() {
 
   const { width } = useWindowDimensions();
-  const collapseWidth = 990;
+  const collapseWidth = 1000;
+  const headerRef = useRef();
 
   const [navDisplay, activateNavDisplay] = useState(false)
   const navDisplayed = navDisplay === true ? "displayed" : "hidden"
   const activated = navDisplay && "displayed"
+
+  useOnClickOutside(headerRef, () => activateNavDisplay(false))
 
   const links = [
     <li key={1}><a href="#about">About</a></li>,
@@ -35,6 +39,7 @@ export default function Header() {
           </div>}
       </header>
       <ul
+        ref={headerRef}
         onMouseLeave={() => activateNavDisplay(!navDisplay)}
         className={`menu-dropdown-${navDisplayed}`}>
         {navDisplay === true && width < collapseWidth && links}

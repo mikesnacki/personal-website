@@ -49,9 +49,11 @@ h5{
   font-size: calc(42px - 1.0vw);
 }
 
-p{
+p, a{
   font-size: calc(40px - 1.0vw);
 }
+
+
 /*----------------------------- GENERAL STYLING -----------------------------*/
 
 .flex-row{
@@ -108,7 +110,7 @@ p{
   z-index: 200;
   padding-top:1vh;
   padding-bottom: 1vh;
-  max-height: 12.5vh;
+  max-height: 15vh;
   width:100%;
   margin: 0;
 }
@@ -171,7 +173,6 @@ p{
 .menu-dropdown-displayed a{
   color:#393e46;
   display: block;
-  font-size: calc(10px + 1vw);
 }
 
 .menu-dropdown-displayed a:hover {
