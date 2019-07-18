@@ -116,11 +116,17 @@ p, a{
   margin: 0;
 }
 
-.menu-bar{
+.menu-bar-hidden{
    border: transparent;
-   margin-right: 10vw;
+   margin-right: 5vw;
    padding: 2 10px;
    background-color: transparent;
+}
+
+.menu-bar-displayed{
+  border: transparent;
+  margin-right: 5vw;
+  background-color: transparent;
 }
 
 .line1, .line2, .line3 {
@@ -132,16 +138,16 @@ p, a{
   transition: 0.5s
 }
 
-.displayed .line1 {
+.menu-bar-displayed .line1 {
   width: 28px;
   transform: rotate(-120deg) translate(-18px, -11px);
 }
 
-.displayed .line2 {
+.menu-bar-displayed .line2 {
   transform: rotate(-90deg)
 }
 
-.displayed .line3 {
+.menu-bar-displayed .line3 {
   width: 28px;
   transform: rotate(-60deg) translate(12px, 9px);
 }
@@ -354,3 +360,5 @@ p, a{
   background-color: rgba(45,53,97,0.05);
   padding: 3vh 5vw;
  }
+
+ /*----------------------------- Portfolio PAGE -----------------------------*/
