@@ -16,7 +16,7 @@ export default function Header() {
   const links = [
     <li key={1}><a href="#about">About</a></li>,
     <li key={2}><a href="#experience">Experience</a></li>,
-    <li key={3}><a>Portfolio</a></li>,
+    <li key={3}><a href="#portfolio">Portfolio</a></li>,
     <li key={4}><a>Contact</a></li>
   ]
 

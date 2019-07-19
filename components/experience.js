@@ -25,7 +25,6 @@ export default function Experience() {
 
     const expIsOnScreen = (expOnSCreen === true) ? "visible" : "hidden";
 
-
     const iconSize = width / 20 + 12;
 
     const jobsArray = ["SUNY Brockport",

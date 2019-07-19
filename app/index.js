@@ -5,19 +5,20 @@ import Header from "../components/header"
 import Landing from "../components/landing"
 import About from "../components/about"
 import Experience from "../components/experience"
+import Portfolio from "../components/portfolio"
 
-class App extends React.Component {
+export default function App() {
 
-    render() {
-        return (
-            <div>
-                <Header />
-                <Landing />
-                <About />
-                <Experience />
-            </div>
-        )
-    }
+    return (
+        <div>
+            <Header />
+            <Landing />
+            <About />
+            <Experience />
+            <Portfolio />
+        </div>
+    )
+
 }
 
 ReactDOM.render(<App />, document.getElementById('app'))

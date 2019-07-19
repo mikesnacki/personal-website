@@ -361,4 +361,43 @@ p, a{
   padding: 3vh 5vw;
  }
 
- /*----------------------------- Portfolio PAGE -----------------------------*/
+ /*----------------------------- SITES PAGE -----------------------------*/
+
+ .site-container{
+  color: #17A398;
+  display: block;
+  background-color: #f2f4f6;
+  height: minmax(100%, 30vh);
+  padding: 10vh 15vw;
+}
+
+ /*----------------------------- PORTFOLIO PAGE -----------------------------*/
+
+ .portfolio-container{
+  color: #17A398;
+  display: block;
+  background-color: #f2f4f6;
+  height: minmax(100%, 100vh);
+  padding: 10vh 15vw;
+}
+
+.sites-container{
+  background-color: rgba(45,53,97,0.05);
+  padding: 1vh 1vw;
+}
+
+.flex-col-port{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  margin: 3vw;
+}
+
+.flex-col-port img {
+  margin: 1vh auto;
+  width: 90%;
+  height: auto;
+}
+
+
