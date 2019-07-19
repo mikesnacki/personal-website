@@ -39,7 +39,7 @@ function Portfolio() {
     ]
 
     return (
-        <div>
+        <div id="portfolio">
             <h2 className="align-center">Portfolio</h2>
             <ul
                 className="align-center flex-row ">

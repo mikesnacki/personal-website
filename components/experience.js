@@ -21,7 +21,7 @@ export default function Experience() {
     const { width, height } = useWindowDimensions();
     const [jobs, setJobs] = useState(6)
     const expRef = useRef();
-    const expOnSCreen = useOnScreen(expRef, "-200px")
+    const expOnSCreen = useOnScreen(expRef, "-100px")
 
     const expIsOnScreen = (expOnSCreen === true) ? "visible" : "hidden";
 

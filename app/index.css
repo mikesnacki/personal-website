@@ -30,27 +30,27 @@ svg{
 }
 
 h1{
-  font-size: calc(50px - 1.0vw);
-}
-
-h2{
-  font-size: calc(47px - 1.0vw);
-}
-
-h3{
-  font-size: calc(45px - 1.0vw);
-}
-
-h4{
-  font-size: calc(43px - 1.0vw);
-}
-
-h5{
   font-size: calc(42px - 1.0vw);
 }
 
-p, a{
+h2{
   font-size: calc(40px - 1.0vw);
+}
+
+h3{
+  font-size: calc(39px - 1.0vw);
+}
+
+h4{
+  font-size: calc(38px - 1.0vw);
+}
+
+h5{
+  font-size: calc(37px - 1.0vw);
+}
+
+p, a{
+  font-size: calc(30px - 1.0vw);
 }
 
 
@@ -157,9 +157,9 @@ p, a{
   transition: all 0.5s ease-in-out; 
   background-color: #dadddf;
   z-index: 100;
-  top: 4vh;
+  top: 7vh;
   margin: 0 auto;
-  padding: 4vh 3vw 2vh;
+  padding: 3vh 3vw 2vh;
   display: block;
   width:100vw;
   text-align: center;
@@ -281,7 +281,6 @@ p, a{
 
 .hidden{
   opacity: 0;
-  display: hidden;
 }
 
 /*----------------------------- EXPERIENCE PAGE -----------------------------*/
@@ -383,7 +382,7 @@ p, a{
 
 .sites-container{
   background-color: rgba(45,53,97,0.05);
-  padding: 1vh 1vw;
+  padding: 1vh 3vw;
 }
 
 .flex-col-port{
@@ -392,6 +391,7 @@ p, a{
   flex-basis: 100%;
   flex: 1;
   margin: 3vw;
+  padding: 0 5vw;
 }
 
 .flex-col-port img {
@@ -400,4 +400,6 @@ p, a{
   height: auto;
 }
 
-
+.flex-col-port a{
+  color: #2d3561;
+}

@@ -5,7 +5,7 @@ import { FaHome, FaUniversity, FaClock, FaTerminal } from 'react-icons/fa'
 
 export default function About() {
     const aboutRef = useRef();
-    const aboutOnScreen = useOnScreen(aboutRef, "-200px")
+    const aboutOnScreen = useOnScreen(aboutRef, "-100px")
     const { width, height } = useWindowDimensions();
     const iconSize = width / 20 + 12;
     const abOnScnreen = aboutOnScreen === true ? "visible" : "hidden"
