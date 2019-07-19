@@ -7,7 +7,7 @@ function Portfolio() {
 
     const sites = [
         {
-            img: `../imgs/mikesnacki.png`,
+            img: `https://res.cloudinary.com/mikesnacki/image/upload/v1563557684/mikesnacki.com/mikesnacki_dlxjdd.png`,
             name: "mikesnacki.com",
             technologies: "React Hooks, Styled Components",
             blurb: `This webpage was build using primarily a functional
@@ -18,7 +18,7 @@ function Portfolio() {
             url: "mikesnacki.com",
         },
         {
-            img: `../imgs/library.png`,
+            img: `https://res.cloudinary.com/mikesnacki/image/upload/v1563557684/mikesnacki.com/library_eqem6t.png`,
             name: "Library",
             technologies: "React, Firebase",
             blurb: `After finishing Tyler McGinnis' react course, I looked around
@@ -28,7 +28,7 @@ function Portfolio() {
             url: "https://adoring-archimedes-a25935.netlify.com/"
         },
         {
-            img: `../imgs/githubbattle.png`,
+            img: `https://res.cloudinary.com/mikesnacki/image/upload/v1563557684/mikesnacki.com/githubbattle_admwwv.png`,
             name: "Github Battle",
             technologies: "React, render props, code splitting",
             blurb: `Part of the course to learn React from Tyler McGinnis. My first React app. 

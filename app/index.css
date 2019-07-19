@@ -390,8 +390,8 @@ p, a{
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
-  margin: 3vw;
-  padding: 0 5vw;
+  margin: 1vh 5vw;
+  width: 100%;
 }
 
 .flex-col-port img {
