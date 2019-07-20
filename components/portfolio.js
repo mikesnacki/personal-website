@@ -7,32 +7,32 @@ function Portfolio() {
 
     const sites = [
         {
-            img: `https://res.cloudinary.com/mikesnacki/image/upload/v1563557684/mikesnacki.com/mikesnacki_dlxjdd.png`,
+            img: `https://res.cloudinary.com/mikesnacki/image/upload/ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/mikesnacki_dlxjdd.jpg`,
             name: "mikesnacki.com",
             technologies: "React Hooks, Styled Components",
-            blurb: `This webpage was build using primarily a functional
-                paradigm in the form of hooks. Functional programming 
+            blurb: `This webpage was built using primarily the functional
+                paradigm in the form of React Hooks. Functional programming 
                 has always felt more natural to me than objected oriented.
-                I used styled components within this website to give the 
+                In addition, I used styled components within this website to give the 
                 effect of lazy loading, as well slow down the menu actions.`,
             url: "mikesnacki.com",
         },
         {
-            img: `https://res.cloudinary.com/mikesnacki/image/upload/v1563557684/mikesnacki.com/library_eqem6t.png`,
+            img: `https://res.cloudinary.com/mikesnacki/image/upload/ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/library_eqem6t.jpg`,
             name: "Library",
             technologies: "React, Firebase",
-            blurb: `After finishing Tyler McGinnis' react course, I looked around
-                for projects to complete without following along. I looked into
+            blurb: `After finishing Tyler McGinnis' React course, I looked around
+                for projects to complete on my own. I looked into
                 The Odin Project, who suggested a library web app. I used React
                 for the UI and Firebase for data persistence`,
             url: "https://adoring-archimedes-a25935.netlify.com/"
         },
         {
-            img: `https://res.cloudinary.com/mikesnacki/image/upload/v1563557684/mikesnacki.com/githubbattle_admwwv.png`,
+            img: `https://res.cloudinary.com/mikesnacki/image/upload/ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/githubbattle_admwwv.jpg`,
             name: "Github Battle",
             technologies: "React, render props, code splitting",
             blurb: `Part of the course to learn React from Tyler McGinnis. My first React app. 
-                Git Hub Battle uses both functional and class components, render props, 
+                Github Battle uses both functional and class components, render props, 
                 code splitting, themes and an API call to Github`,
             url: "https://serene-franklin-6a7fb3.netlify.com/"
         },
