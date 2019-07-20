@@ -59,7 +59,7 @@ export default function Experience() {
         "Analyze the credit worthiness of select corporate browerers within the  Energy sector, Chemicals industry, and Metals and Mining industry",
         "Responsible for company- and industry-specific research within the U.S. Auto OEM and Auto Parts industry",
         "Support the company’s third party management platform from initial contact with real estate developers to the annual budgeting process for their store(s)",
-        "Implementchanges in product pricing and strategy to drive origination volume and profit margin . Developed several applications in Python and JS, HTML5, CSS3"
+        "Implement changes in product pricing and strategy to drive origination volume and profit margin. Developed several applications in Python and JS, HTML5, CSS3"
 
     ]
 
