@@ -46,7 +46,7 @@ function Portfolio() {
                 {sites.map((site, key) =>
                     <li key={key}
                         className="sites-container flex-col-port">
-                        <h2><a href={site.url}>{site.name}</a></h2>
+                        <h2><button className="btn-clear"><a href={site.url}>{site.name}</a></button></h2>
                         <img src={site.img} alt="" />
                         <h5>Built with: {site.technologies}</h5>
                         <p>{site.blurb}</p>
