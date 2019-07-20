@@ -17,7 +17,6 @@ export default function About() {
             id="about"
             ref={aboutRef}
         >
-
             <div className={`flex-row about space-around ${abOnScnreen}`}>
                 <div className={`flex-col`}>
                     <h2 className="align-center ">Live</h2>

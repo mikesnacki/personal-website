@@ -30,27 +30,31 @@ svg{
 }
 
 h1{
-  font-size: calc(42px - 1.0vw);
+  font-size: calc(42px - 0.9vw);
 }
 
 h2{
-  font-size: calc(40px - 1.0vw);
+  font-size: calc(40px - 0.9vw);
 }
 
 h3{
-  font-size: calc(39px - 1.0vw);
+  font-size: calc(39px - 0.9vw);
 }
 
 h4{
-  font-size: calc(38px - 1.0vw);
+  font-size: calc(38px - 0.9vw);
 }
 
 h5{
-  font-size: calc(37px - 1.0vw);
+  font-size: calc(37px - 0.9vw);
+}
+
+h6{
+  font-size: calc(33px - 0.9vw);
 }
 
 p, a{
-  font-size: calc(30px - 1.0vw);
+  font-size: calc(32px - 0.9vw);
 }
 
 
@@ -173,7 +177,7 @@ p, a{
 
 .menu-dropdown-displayed{
   margin: 0;
-  padding: 5.5vh 0 4vh;
+  padding: 6.0vh 0 4vh;
 }
 
 .menu-dropdown-hidden{
@@ -270,7 +274,7 @@ p, a{
 .about-container{
   display: block;
   background-color: #17A398;
-  height: minmax(100%, 100vh);
+  height: minmax(100vh, 100%);
 }
 
 .about{
@@ -288,6 +292,7 @@ p, a{
 
 .hidden{
   opacity: 0;
+  display: hidden;
 }
 
 /*----------------------------- EXPERIENCE PAGE -----------------------------*/
@@ -367,24 +372,23 @@ p, a{
   padding: 3vh 5vw;
  }
 
- /*----------------------------- SITES PAGE -----------------------------*/
+ /*----------------------------- PORTFOLIO PAGE -----------------------------*/
 
  .site-container{
   color: #17A398;
   display: block;
   background-color: #f2f4f6;
   height: minmax(100%, 30vh);
-  padding: 10vh 15vw;
+  padding: 10vh 5vw;
 }
 
- /*----------------------------- PORTFOLIO PAGE -----------------------------*/
 
  .portfolio-container{
+  background-color: rgba(45,53,97,0.05);
   color: #17A398;
   display: block;
-  background-color: #f2f4f6;
-  height: minmax(100%, 100vh);
-  padding: 10vh 15vw;
+  padding: 15vh 10vw 25vh;
+  height: minmax(100vh, 100%);
 }
 
 .sites-container{
@@ -392,7 +396,7 @@ p, a{
   padding: 1vh 3vw;
 }
 
-.sites-container p, h5, img, a, h2{
+.sites-container p, h5, h6, img, a, h2{
   margin-top: 1vh;
   margin-bottom: 1vh;
   padding: 1vh 1vw;
@@ -407,8 +411,8 @@ p, a{
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
-  margin: 1vh 5vw;
-  width: 100%;
+  margin: 1vh 2vw;
+  padding: 2vh 3vw;
 }
 
 .flex-col-port img {
@@ -419,5 +423,24 @@ p, a{
 
 .flex-col-port a{
   color: #2d3561;
+  font-weight: 800;
 }
 
+.click{
+  margin: 0 auto;
+  opacity: 50%;
+  padding: 0.75vh;
+  border: 3px solid #2d3561;
+  border-top: none;
+  border-right: none;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg)
+}
+
+.click{
+  animation-delay: 1.0s;
+  animation: pulse 2.0s ease-in-out;
+  animation-delay: 1.0s;
+  animation-iteration-count: infinite;
+}

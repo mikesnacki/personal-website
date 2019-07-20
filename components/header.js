@@ -29,8 +29,9 @@ export default function Header() {
           ? <ul className="nav-links">{links}</ul >
           : <div>
             <button
+              className={`menu-bar-${navDisplayed}`}
               onClick={() => activateNavDisplay(!navDisplay)}
-              className={`menu-bar-${navDisplayed}`}>
+            >
               <div className="line1"></div>
               <div className="line2"></div>
               <div className="line3"></div>
@@ -40,6 +41,7 @@ export default function Header() {
       <ul
         ref={headerRef}
         onMouseLeave={() => activateNavDisplay(!navDisplay)}
+        onMouseOut={() => activateNavDisplay(!navDisplay)}
         onClick={() => activateNavDisplay(!navDisplay)}
         className={`menu-dropdown-${navDisplayed}`}>
         {navDisplay === true && width < collapseWidth && links}

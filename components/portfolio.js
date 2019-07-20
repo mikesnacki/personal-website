@@ -1,9 +1,11 @@
-import React from 'react'
-import { useWindowDimensions } from "../utilhooks/windowDim"
+import React, { useRef } from 'react'
+import useOnScreen from "../utilhooks/useOnScreen"
 
 function Portfolio() {
-    const { width, height } = useWindowDimensions();
-    const picWidth = 50;
+    const portRef = useRef();
+    const portOnSCreen = useOnScreen(portRef, "-100px")
+
+    const portIsOnScreen = (portOnSCreen === true) ? "visible" : "hidden";
 
     const sites = [
         {
@@ -39,16 +41,19 @@ function Portfolio() {
     ]
 
     return (
-        <div id="portfolio">
-            <h2 className="align-center">Portfolio</h2>
+        <div
+            id="portfolio"
+            ref={portRef}
+            className={`portfolio-container ${portIsOnScreen}`}>
+            <h2 className="align-center">Some of my web work</h2>
             <ul
                 className="align-center flex-row ">
                 {sites.map((site, key) =>
                     <li key={key}
                         className="sites-container flex-col-port">
                         <h2><button className="button-clear"><a href={site.url}>{site.name}</a></button></h2>
-                        <img src={site.img} alt="" />
-                        <h5>Built with: {site.technologies}</h5>
+                        <img src={site.img} alt="image for the portfolio sites" />
+                        <h6>Built with: {site.technologies}</h6>
                         <p>{site.blurb}</p>
                     </li>)}
             </ul>

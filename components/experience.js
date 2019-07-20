@@ -18,7 +18,7 @@ import {
 
 export default function Experience() {
 
-    const { width, height } = useWindowDimensions();
+    const { width } = useWindowDimensions();
     const [jobs, setJobs] = useState(6)
     const expRef = useRef();
     const expOnSCreen = useOnScreen(expRef, "-100px")
@@ -100,6 +100,7 @@ export default function Experience() {
             id="experience"
             ref={expRef}
         >
+            <h2 className="align-center">My career and skills</h2>
             <div className={`${expIsOnScreen}`}>
                 <div className="align-center exp-header">
                     <h2 className="align-center">Career Timeline</h2>
