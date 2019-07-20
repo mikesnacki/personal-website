@@ -30,31 +30,31 @@ svg{
 }
 
 h1{
-  font-size: calc(42px - 0.9vw);
+  font-size: calc(42px - 0.8vw);
 }
 
 h2{
-  font-size: calc(40px - 0.9vw);
+  font-size: calc(40px - 0.8vw);
 }
 
 h3{
-  font-size: calc(39px - 0.9vw);
+  font-size: calc(39px - 0.8vw);
 }
 
 h4{
-  font-size: calc(38px - 0.9vw);
+  font-size: calc(38px - 0.8vw);
 }
 
 h5{
-  font-size: calc(37px - 0.9vw);
+  font-size: calc(37px - 0.8vw);
 }
 
 h6{
-  font-size: calc(33px - 0.9vw);
+  font-size: calc(36px - 0.8vw);
 }
 
 p, a{
-  font-size: calc(32px - 0.9vw);
+  font-size: calc(34px - 0.8vw);
 }
 
 
@@ -379,7 +379,7 @@ p, a{
   display: block;
   background-color: #f2f4f6;
   height: minmax(100%, 30vh);
-  padding: 10vh 5vw;
+  padding: 10vh 2.5vw;
 }
 
 
@@ -387,7 +387,7 @@ p, a{
   background-color: rgba(45,53,97,0.05);
   color: #17A398;
   display: block;
-  padding: 15vh 10vw 25vh;
+  padding: 15vh 5vw 25vh;
   height: minmax(100vh, 100%);
 }
 
@@ -412,12 +412,12 @@ p, a{
   flex-basis: 100%;
   flex: 1;
   margin: 1vh 2vw;
-  padding: 2vh 3vw;
+  padding: 2vh 2vw;
 }
 
 .flex-col-port img {
   margin: 1vh auto;
-  width: 90%;
+  width: 87.5%;
   height: auto;
 }
 
