@@ -82,7 +82,7 @@ p, a{
   margin: auto;
 }
 
-.btn-clear{
+.button-clear{
   border: none;
   background-color: inherit;
   font-size: inherit;
@@ -319,7 +319,7 @@ p, a{
   padding: 10vh 15vw;
 }
 
-.btn-experience{
+.button-experience{
   background-image: radial-gradient( rgb(23,163,152, 0.6), rgba(23,163,152,0.5));
   border: none;
   border-radius: 50%;
@@ -328,11 +328,11 @@ p, a{
   margin-top: -8px;
 }
 
-.btn-experience:hover{
+.button-experience:hover{
   background-image: radial-gradient( rgb(23,163,152, 0.8), rgba(23,163,152,0.7));
 }
 
-.btn-experience:active{
+.button-experience:active{
   animation: gradient 500ms;
 }
 

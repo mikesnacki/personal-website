@@ -106,7 +106,7 @@ export default function Experience() {
                     <Bar className="flex-row space-around">
                         {[...Array(7)].map((x, i) =>
                             <button
-                                className="btn-experience"
+                                className="button-experience"
                                 key={i}
                                 value={i}
                                 onClick={() => setJobs(i)}
