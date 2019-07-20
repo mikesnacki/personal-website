@@ -6,6 +6,8 @@ import Landing from "../components/landing"
 import About from "../components/about"
 import Experience from "../components/experience"
 import Portfolio from "../components/portfolio"
+import Contact from "../components/contact"
+import Footer from "../components/footer"
 
 export default function App() {
 
@@ -16,6 +18,8 @@ export default function App() {
             <About />
             <Experience />
             <Portfolio />
+            <Contact />
+            <Footer />
         </div>
     )
 

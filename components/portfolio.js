@@ -8,17 +8,7 @@ function Portfolio() {
     const portIsOnScreen = (portOnSCreen === true) ? "visible" : "hidden";
 
     const sites = [
-        {
-            img: `https://res.cloudinary.com/mikesnacki/image/upload/ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/mikesnacki_dlxjdd.webp`,
-            name: "mikesnacki.com",
-            technologies: "React Hooks, Styled Components",
-            blurb: `This webpage was built using primarily the functional
-                paradigm in the form of React Hooks. Functional programming 
-                has always felt more natural to me than objected oriented.
-                In addition, I used styled components within this website to give the 
-                effect of lazy loading, as well slow down the menu actions.`,
-            url: "mikesnacki.com",
-        },
+
         {
             img: `https://res.cloudinary.com/mikesnacki/image/upload//ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/library_eqem6t.webp`,
             name: "Library",
@@ -37,6 +27,17 @@ function Portfolio() {
                 Github Battle uses both functional and class components, render props, 
                 code splitting, themes and an API call to Github`,
             url: "https://serene-franklin-6a7fb3.netlify.com/"
+        },
+        {
+            img: `https://res.cloudinary.com/mikesnacki/image/upload/ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/mikesnacki_dlxjdd.webp`,
+            name: "mikesnacki.com",
+            technologies: "React Hooks, Styled Components",
+            blurb: `This webpage was built using primarily the functional
+                paradigm in the form of React Hooks. Functional programming 
+                has always felt more natural to me than objected oriented.
+                In addition, I used styled components within this website to give the 
+                effect of lazy loading, as well slow down the menu actions.`,
+            url: "https://mikesnacki.com/",
         },
     ]
 

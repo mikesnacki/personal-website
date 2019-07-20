@@ -57,6 +57,9 @@ p, a{
   font-size: calc(34px - 0.8vw);
 }
 
+input, textarea {
+  display: block;
+}
 
 /*----------------------------- GENERAL STYLING -----------------------------*/
 
@@ -126,14 +129,14 @@ p, a{
   margin: 0;
 }
 
-.menu-bar-hidden{
+.menu-bar-false{
    border: transparent;
    margin-right: 5vw;
    padding: 2 10px;
    background-color: transparent;
 }
 
-.menu-bar-displayed{
+.menu-bar-true{
   border: transparent;
   margin-right: 5vw;
   background-color: transparent;
@@ -148,52 +151,47 @@ p, a{
   transition: 0.5s
 }
 
-.menu-bar-displayed .line1 {
+.menu-bar-true .line1 {
   width: 28px;
   transform: rotate(-120deg) translate(-18px, -11px);
 }
 
-.menu-bar-displayed .line2 {
+.menu-bar-true .line2 {
   transform: rotate(-90deg)
 }
 
-.menu-bar-displayed .line3 {
+.menu-bar-true .line3 {
   width: 28px;
   transform: rotate(-60deg) translate(12px, 9px);
 }
 
-.menu-dropdown-displayed{
-  position: fixed;
-  transition: all 0.5s ease-in-out; 
-  background-color: #dadddf;
-  z-index: 100;
-  top: 7vh;
-  margin: 0 auto;
-  padding: 3vh 3vw 2vh;
-  display: block;
-  width:100vw;
-  text-align: center;
-}
-
-.menu-dropdown-displayed{
-  margin: 0;
-  padding: 6.0vh 0 4vh;
-}
-
-.menu-dropdown-hidden{
-  background-color: #dadddf;
+.menu-dropdown-false{
+  background-color: transparent;
   position: fixed;
   display: hidden;
   top:-25vh;
   transition: all 0.5s ease-out; 
 }
 
-.menu-dropdown-displayed a{
+.menu-dropdown-true{
+  position: fixed;
+  transition: all 0.5s ease-in-out; 
+  background-color: #dadddf;
+  z-index: 100;
+  top: 7vh;
+  margin: 0 auto;
+  padding: 6.0vh 0 4vh;
+  display: block;
+  width:100vw;
+  text-align: center;
+}
+
+.menu-dropdown-true a{
   color:#393e46;
   display: block;
 }
 
-.menu-dropdown-displayed a:hover {
+.menu-dropdown-true a:hover {
   transition: 0.2s;
   font-weight: 600;
   color: #ff9c91;
@@ -400,7 +398,7 @@ p, a{
 }
 
 .sites-container a {
-  font-size: calc(40px - 1.0vw);
+  font-size: calc(36px - 0.8vw);
 }
 
 .flex-col-port{
@@ -440,4 +438,69 @@ p, a{
   animation: pulse 2.0s ease-in-out;
   animation-delay: 1.0s;
   animation-iteration-count: infinite;
+}
+
+/*----------------------------- CONTACT PAGE -----------------------------*/
+
+.contact {
+  align-items: center;
+  height: 50vh;
+  padding-top: 15vh;
+  color: #17A398;
+}
+
+.contact-input{
+  width: 50%;
+  margin: 2vw auto;
+  padding: 1vh 1vw;
+  border: 2px solid #17A398;
+}
+
+.button-contact{
+  margin-top: 0.5vh;
+  width: 100px;
+  height: 50px;
+  background-color: #17A398;
+  color: white;
+  font-weight: bold;
+  border: 2px solid #393e46;
+}
+
+.button-contact:hover{
+  background-color: #fff;
+  border:3px solid #17A398;
+  color: #393e46;
+}
+
+.button-contact:active:after{
+  background-color: #17A398;
+}
+
+.contact textarea{
+  height: 100px;
+}
+
+ li h2 a{
+   padding: 0;
+   margin: 0;
+ }
+
+
+/*----------------------------- FOOTER -----------------------------*/
+
+.footer{
+  background-color: #2d3561;
+  color: #fff;
+}
+
+.footer div{
+  margin: 1vh auto;
+}
+
+.footer svg {
+  padding: 2vh 1.5vw 0vh;
+}
+
+.footer p {
+    font-size: calc(36px - 1.0vw);
 }

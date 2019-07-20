@@ -9,7 +9,6 @@ export default function Header() {
   const headerRef = useRef();
 
   const [navDisplay, activateNavDisplay] = useState(false)
-  const navDisplayed = navDisplay === true ? "displayed" : "hidden"
 
   useOnClickOutside(headerRef, () => activateNavDisplay(false))
 
@@ -17,19 +16,19 @@ export default function Header() {
     <li key={1}><a href="#about">About</a></li>,
     <li key={2}><a href="#experience">Experience</a></li>,
     <li key={3}><a href="#portfolio">Portfolio</a></li>,
-    <li key={4}><a>Contact</a></li>
+    <li key={4}><a href="#contact">Contact</a></li>
   ]
 
   return (
 
-    <div className="container" >
+    <div className="container" ref={headerRef}>
       <header className="flex-row header space-around">
         <h1>Mike Snacki</h1>
         {width >= collapseWidth
           ? <ul className="nav-links">{links}</ul >
           : <div>
             <button
-              className={`menu-bar-${navDisplayed}`}
+              className={`menu-bar-${navDisplay}`}
               onClick={() => activateNavDisplay(!navDisplay)}
             >
               <div className="line1"></div>
@@ -39,11 +38,10 @@ export default function Header() {
           </div>}
       </header>
       <ul
-        ref={headerRef}
         onMouseLeave={() => activateNavDisplay(!navDisplay)}
         onMouseOut={() => activateNavDisplay(!navDisplay)}
         onClick={() => activateNavDisplay(!navDisplay)}
-        className={`menu-dropdown-${navDisplayed}`}>
+        className={`menu-dropdown-${navDisplay}`}>
         {navDisplay === true && width < collapseWidth && links}
       </ul>
     </div >
