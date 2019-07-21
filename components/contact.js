@@ -1,27 +1,81 @@
 import React, { useRef } from 'react'
-import useOnScreen from "../utilhooks/useOnScreen"
 
-function Contact() {
-    const portRef = useRef();
-    const portOnSCreen = useOnScreen(portRef, "-100px")
+export default class Contact extends React.Component {
 
-    const portIsOnScreen = (portOnSCreen === true) ? "visible" : "hidden";
+    constructor(props) {
+        super(props)
 
-    return (
-        <div
-            id="contact"
-            className="align-center contact" >
-            <form
-                action="mailto:mikesnacki@gmail.com"
-                method="post">
-                <h2>Contact</h2>
-                <input type="text" name="name" placeholder="name" className="contact-input" required></input>
-                <input type="email" name="email" placeholder="email" className="contact-input" required></input>
-                <textarea type="text" name="message" className="contact-input" placeholder="message" required></textarea>
-                <button type="submit" className="button-clear button-contact">Send</button>
-            </form>
-        </div >
-    );
+        this.state = {
+            name: "",
+            email: "",
+            message: "",
+        }
+        this.handleInputChange = this.handleInputChange.bind(this)
+    }
+
+    handleInputChange(event) {
+        const target = event.target
+        const value = target.value
+        const name = target.name
+
+        this.setState({
+            [name]: value
+        });
+    }
+
+    handleSubmit(event) {
+        event.preventDefault();
+        var newMessage = {
+            name: this.refs.name.value,
+            email: this.refs.email.value,
+            message: this.refs.message.value,
+        }
+    }
+
+    render() {
+        return (
+            <div
+                id="contact"
+                className="align-center contact" >
+                <form
+                    action="mailto:mikesnacki@gmail.com"
+                    method="post">
+                    <h2>Contact</h2>
+                    {console.log(this.state)}
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="name"
+                        className="contact-input"
+                        value={this.state.name}
+                        onChange={this.handleInputChange}
+                        autoComplete="off"
+                        required></input>
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="email"
+                        className="contact-input"
+                        value={this.state.email}
+                        onChange={this.handleInputChange}
+                        autoComplete="off"
+                        required></input>
+                    <textarea
+                        type="text"
+                        name="message"
+                        className="contact-input"
+                        placeholder="message"
+                        value={this.state.message}
+                        onChange={this.handleInputChange}
+                        autoComplete="off"
+                        required></textarea>
+                    <button
+                        type="submit"
+                        className="button-clear button-contact">Send
+                </button>
+                </form>
+            </div >
+        )
+    }
 }
 
-export default Contact
