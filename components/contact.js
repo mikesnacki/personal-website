@@ -11,6 +11,8 @@ export default class Contact extends React.Component {
             message: "",
         }
         this.handleInputChange = this.handleInputChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+
     }
 
     handleInputChange(event) {
@@ -30,6 +32,8 @@ export default class Contact extends React.Component {
             email: this.refs.email.value,
             message: this.refs.message.value,
         }
+
+        console.log(newMessage)
     }
 
     render() {
@@ -41,7 +45,6 @@ export default class Contact extends React.Component {
                     action="mailto:mikesnacki@gmail.com"
                     method="post">
                     <h2>Contact</h2>
-                    {console.log(this.state)}
                     <input
                         type="text"
                         name="name"

@@ -391,7 +391,7 @@ input, textarea {
 }
 
 .port{
-  min-width: 300px;
+  /* min-width: 300px; */
 }
 
 .port img {
