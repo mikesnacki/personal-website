@@ -373,16 +373,14 @@ input, textarea {
 
 
  .portfolio-container{
-  background-color: white;
+
   color: #17A398;
   display: block;
   padding: 15vh 4vw 25vh;
   height: minmax(100vh, 100%);
 }
 
-.sites-container{
-  background-color: rgba(45,53,97,0.05);
-}
+
 
 .sites-container p, h5, h6, img, a, h2{
   margin-top: 1vh;
@@ -395,7 +393,7 @@ input, textarea {
 }
 
 .port{
-  width: 50%;
+  min-width: 350px;
 }
 
 .port img {
@@ -409,25 +407,6 @@ input, textarea {
   font-weight: 800;
 }
 
-.click{
-  margin: 0 auto;
-  opacity: 50%;
-  padding: 0.75vh;
-  border: 3px solid #2d3561;
-  border-top: none;
-  border-right: none;
-  width: 20px;
-  height: 20px;
-  transform: rotate(-45deg)
-}
-
-.click{
-  animation-delay: 1.0s;
-  animation: pulse 2.0s ease-in-out;
-  animation-delay: 1.0s;
-  animation-iteration-count: infinite;
-}
-
 /*----------------------------- CONTACT PAGE -----------------------------*/
 
 .contact {
@@ -435,6 +414,7 @@ input, textarea {
   height: 50vh;
   padding-top: 15vh;
   color: #17A398;
+  background-color: rgba(45,53,97,0.05);
 }
 
 .contact-input{
