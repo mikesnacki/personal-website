@@ -377,13 +377,13 @@ input, textarea {
   color: #17A398;
   display: block;
   height: minmax(100vh, 100%);
-  margin: 0 12.5vw;
+  /* margin: 0 12.5vw; */
 }
 
 .sites-container p, h5, h6, img, a, h2{
-  margin-top: 1vh;
+  /* margin-top: 1vh;
   margin-bottom: 1vh;
-  padding: 1vh 1vw;
+  padding: 1vh 1vw; */
 }
 
 .sites-container a {
@@ -391,7 +391,7 @@ input, textarea {
 }
 
 .port{
-  /* min-width: 300px; */
+  min-width: 300px;
 }
 
 .port img {
