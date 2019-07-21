@@ -45,13 +45,13 @@ function Portfolio() {
         <div
             id="portfolio"
             ref={portRef}
-            className={`portfolio-container ${portIsOnScreen}`}>
+            className={`experience-container ${portIsOnScreen}`}>
             <h2 className="align-center">Some of my web work</h2>
             <ul
                 className="align-center flex-row ">
                 {sites.map((site, key) =>
                     <li key={key}
-                        className="sites-container flex-col-port">
+                        className=" flex-col port">
                         <h2><button className="button-clear"><a href={site.url}>{site.name}</a></button></h2>
                         <img src={site.img} alt="image for the portfolio sites" />
                         <h6>Built with: {site.technologies}</h6>

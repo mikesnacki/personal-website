@@ -22,7 +22,7 @@ ul {
 
 li {
   margin-right: 5vw;
-  font-size: calc(10px + 0.5vw);
+  /* font-size: calc(10px + 0.5vw); */
 }
 
 svg{
@@ -30,31 +30,31 @@ svg{
 }
 
 h1{
-  font-size: calc(42px - 0.8vw);
+  font-size: calc(0.5vw + 18px);
 }
 
 h2{
-  font-size: calc(40px - 0.8vw);
+  font-size: calc(0.5vw + 17px);
 }
 
 h3{
-  font-size: calc(39px - 0.8vw);
+  font-size: calc(0.5vw + 16px);
 }
 
 h4{
-  font-size: calc(38px - 0.8vw);
+  font-size: calc(0.5vw + 15px);
 }
 
 h5{
-  font-size: calc(37px - 0.8vw);
+  font-size: calc(0.5vw + 14px);
 }
 
 h6{
-  font-size: calc(36px - 0.8vw);
+  font-size: calc(0.5vw + 13px);
 }
 
 p, a{
-  font-size: calc(34px - 0.8vw);
+  font-size: calc(0.5vw + 12px);
 }
 
 input, textarea {
@@ -107,7 +107,7 @@ input, textarea {
 
 .flex-row h1 {
   display: inline;
-  font-size: calc(40px - 1.0vw);
+  font-size: calc(0.5vw + 18px);
 }
 
 .flex-row h1 {
@@ -166,7 +166,6 @@ input, textarea {
 }
 
 .menu-dropdown-false{
-  background-color: transparent;
   position: fixed;
   display: hidden;
   top:-25vh;
@@ -371,16 +370,10 @@ input, textarea {
 
  /*----------------------------- PORTFOLIO PAGE -----------------------------*/
 
- .site-container{
-  color: #17A398;
-  display: block;
-  background-color: #f2f4f6;
-  height: minmax(100%, 30vh);
-}
 
 
  .portfolio-container{
-  background-color: rgba(45,53,97,0.05);
+  background-color: white;
   color: #17A398;
   display: block;
   padding: 15vh 4vw 25vh;
@@ -398,25 +391,20 @@ input, textarea {
 }
 
 .sites-container a {
-  font-size: calc(36px - 0.8vw);
+  font-size: calc(0.5vw + 17px);
 }
 
-.flex-col-port{
-  display: flex;
-  flex-direction: column;
-  flex-basis: 100%;
-  flex: 1;
-  margin: 1vh 1vw;
-  padding: 1vh 1vw;
+.port{
+  width: 50%;
 }
 
-.flex-col-port img {
+.port img {
   margin: 1vh auto;
-  width: 87.5%;
+  width: 90%;
   height: auto;
 }
 
-.flex-col-port a{
+.port a{
   color: #2d3561;
   font-weight: 800;
 }
@@ -501,6 +489,3 @@ input, textarea {
   padding: 2vh 1.5vw 0vh;
 }
 
-.footer p {
-    font-size: calc(36px - 1.0vw);
-}
