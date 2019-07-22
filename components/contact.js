@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 
 export default class Contact extends React.Component {
 
@@ -33,7 +33,14 @@ export default class Contact extends React.Component {
             message: this.refs.message.value,
         }
 
-        console.log(newMessage)
+        if (newMessage) {
+            this.props.addMessage(newMessage)
+            this.setState({
+                name: "",
+                email: "",
+                message: ""
+            })
+        }
     }
 
     render() {
@@ -42,13 +49,14 @@ export default class Contact extends React.Component {
                 id="contact"
                 className="align-center contact" >
                 <form
-                    action="mailto:mikesnacki@gmail.com"
+                    onSubmit={this.handleSubmit}
                     method="post">
                     <h2>Contact</h2>
                     <input
                         type="text"
                         name="name"
                         placeholder="name"
+                        ref="name"
                         className="contact-input"
                         value={this.state.name}
                         onChange={this.handleInputChange}
@@ -58,6 +66,7 @@ export default class Contact extends React.Component {
                         type="email"
                         name="email"
                         placeholder="email"
+                        ref="email"
                         className="contact-input"
                         value={this.state.email}
                         onChange={this.handleInputChange}
@@ -68,6 +77,7 @@ export default class Contact extends React.Component {
                         name="message"
                         className="contact-input"
                         placeholder="message"
+                        ref="message"
                         value={this.state.message}
                         onChange={this.handleInputChange}
                         autoComplete="off"
