@@ -9,6 +9,7 @@ import Portfolio from "../components/portfolio"
 import Contact from "../components/contact"
 import Footer from "../components/footer"
 import base from "../firebase"
+import Modal from "../components/modal"
 
 class App extends React.Component {
 
@@ -46,37 +47,20 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                {console.log(this.state.show)}
                 <Header />
                 <Landing />
                 <About />
                 <Experience />
                 <Portfolio />
                 <Contact addMessage={this.addMessage} />
-                {/* <Modal show={this.state.show}
+                <Modal
+                    show={this.state.show}
                     hideModal={this.hideModal}
-                /> */}
+                />
                 <Footer />
             </div>
         )
     }
 }
-
-// const Modal = ({ hideModal, show }) => {
-//     show === false ? "display-block" : "display-none"
-
-//     return (
-//         <div className={show === false ? "display-block" : "display-none"}>
-//             <section className='modal-main'>
-//                 Thanks For your Submission!
-//                 <button
-//                     onClick={hideModal}
-//                 >
-//                     Close
-//           </button>
-//             </section>
-//         </div>
-//     );
-// };
 
 ReactDOM.render(<App />, document.getElementById('app'))
