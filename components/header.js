@@ -26,16 +26,16 @@ export default function Header() {
         <h1>Mike Snacki</h1>
         {width >= collapseWidth
           ? <ul className="nav-links">{links}</ul >
-          : <div>
-            <button
-              className={`menu-bar-${navDisplay}`}
-              onClick={() => activateNavDisplay(!navDisplay)}
-            >
-              <div className="line1"></div>
-              <div className="line2"></div>
-              <div className="line3"></div>
-            </button>
-          </div>}
+          :
+          <button
+            className={`menu-bar-${navDisplay}`}
+            onClick={() => activateNavDisplay(!navDisplay)}
+          >
+            <div className="line1"></div>
+            <div className="line2"></div>
+            <div className="line3"></div>
+          </button>
+        }
       </header>
       <ul
         onMouseLeave={() => activateNavDisplay(!navDisplay)}
