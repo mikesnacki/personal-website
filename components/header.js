@@ -39,7 +39,6 @@ export default function Header() {
       </header>
       <ul
         onMouseLeave={() => activateNavDisplay(!navDisplay)}
-        onMouseOut={() => activateNavDisplay(!navDisplay)}
         onClick={() => activateNavDisplay(!navDisplay)}
         className={`menu-dropdown-${navDisplay}`}>
         {navDisplay === true && width < collapseWidth && links}
