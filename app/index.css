@@ -402,7 +402,7 @@ input, textarea {
 .contact {
   align-items: center;
   height: 50vh;
-  padding-top: 15vh;
+  padding-top: 2vh;
   color: #17A398;
   background-color: rgba(45,53,97,0.05);
 }
