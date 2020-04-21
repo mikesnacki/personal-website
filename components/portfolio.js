@@ -9,36 +9,19 @@ function Portfolio() {
 
     const sites = [
         {
-<<<<<<< HEAD
             img: `https://res.cloudinary.com/mikesnacki/image/upload//upload/ar_3.0,c_crop/q_80/v1587469258/storydashboard_dldomm.png`,
             name: "Story Dashboard",
             technologies: "MongoDB, Express, React, Node",
-            blurb: `Second full stack application. Allows users to log in using Auth0, create projects and stories within projects. Everything is editable`,
+            blurb: `Second full stack application. Allows users to log in using Auth0, create projects and stories within projects.`,
             url: "https://storydashboard.herokuapp.com/"
         },
         {
             img: `https://res.cloudinary.com/mikesnacki/image/upload/ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/snackirents_br1eau.png`,
-=======
-            img: `https://res.cloudinary.com/mikesnacki/image/upload//ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/snackirents_br1eau.webp`,
->>>>>>> 57d1b8da7de46d4ea4602fa9b956a7052097d2ca
             name: "Snacki Rents",
             technologies: "MongoDB, Express, React, Node",
             blurb: `First full stack application, built on Express and Node. There are select sliders and buttons to filter properties to a customer's preference
             Application has a Admin area which allows property managers to add and change properties. `,
-<<<<<<< HEAD
             url: "https://snackirents.herokuapp.com/"
-=======
-            url: "http://snackirents.herokuapp.com/"
-        },{
-            img: `https://res.cloudinary.com/mikesnacki/image/upload//ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/library_eqem6t.webp`,
-            name: "Library",
-            technologies: "React, Firebase",
-            blurb: `After finishing Tyler McGinnis' React course, I looked around
-                for projects to complete on my own. I looked into
-                The Odin Project, who suggested a library web app. I used React
-                for the UI and Firebase for data persistence`,
-            url: "https://adoring-archimedes-a25935.netlify.com/"
->>>>>>> 57d1b8da7de46d4ea4602fa9b956a7052097d2ca
         },
         {
             img: `https://res.cloudinary.com/mikesnacki/image/upload/ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/githubbattle_admwwv.png`,
