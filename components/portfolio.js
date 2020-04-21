@@ -9,7 +9,7 @@ function Portfolio() {
 
     const sites = [
         {
-            img: `https://res.cloudinary.com/mikesnacki/image/upload//upload/ar_3.0,c_crop/q_80/v1587469258/storydashboard_dldomm.png`,
+            img: `https://res.cloudinary.com/mikesnacki/image/upload/ar_3.0,c_crop/q_80/v1587469258/storydashboard_dldomm.png`,
             name: "Story Dashboard",
             technologies: "MongoDB, Express, React, Node",
             blurb: `Second full stack application. Allows users to log in using Auth0, create projects and stories within projects.`,
