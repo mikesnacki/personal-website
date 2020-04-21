@@ -8,19 +8,23 @@ function Portfolio() {
     const portIsOnScreen = (portOnSCreen === true) ? "visible" : "hidden";
 
     const sites = [
-
         {
-            img: `https://res.cloudinary.com/mikesnacki/image/upload//ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/library_eqem6t.webp`,
-            name: "Library",
-            technologies: "React, Firebase",
-            blurb: `After finishing Tyler McGinnis' React course, I looked around
-                for projects to complete on my own. I looked into
-                The Odin Project, who suggested a library web app. I used React
-                for the UI and Firebase for data persistence`,
-            url: "https://adoring-archimedes-a25935.netlify.com/"
+            img: `https://res.cloudinary.com/mikesnacki/image/upload//upload/ar_3.0,c_crop/q_80/v1587469258/storydashboard_dldomm.png`,
+            name: "Story Dashboard",
+            technologies: "MongoDB, Express, React, Node",
+            blurb: `Second full stack application. Allows users to log in using Auth0, create projects and stories within projects. Everything is editable`,
+            url: "https://storydashboard.herokuapp.com/"
         },
         {
-            img: `https://res.cloudinary.com/mikesnacki/image/upload//ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/githubbattle_admwwv.webp`,
+            img: `https://res.cloudinary.com/mikesnacki/image/upload/ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/snackirents_br1eau.png`,
+            name: "Snacki Rents",
+            technologies: "MongoDB, Express, React, Node",
+            blurb: `First full stack application, built on Express and Node. There are select sliders and buttons to filter properties to a customer's preference
+            Application has a Admin area which allows property managers to add and change properties. `,
+            url: "https://snackirents.herokuapp.com/"
+        },
+        {
+            img: `https://res.cloudinary.com/mikesnacki/image/upload/ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/githubbattle_admwwv.png`,
             name: "Github Battle",
             technologies: "React, render props, code splitting",
             blurb: `Part of the course to learn React from Tyler McGinnis. My first React app. 
@@ -29,7 +33,7 @@ function Portfolio() {
             url: "https://serene-franklin-6a7fb3.netlify.com/"
         },
         {
-            img: `https://res.cloudinary.com/mikesnacki/image/upload/ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/mikesnacki_dlxjdd.webp`,
+            img: `https://res.cloudinary.com/mikesnacki/image/upload/ar_3.0,c_crop/q_80/v1563557684/mikesnacki.com/mikesnacki_dlxjdd.png`,
             name: "mikesnacki.com",
             technologies: "React Hooks, Styled Components",
             blurb: `This webpage was built using primarily the functional
