@@ -33,7 +33,8 @@ export default function Experience() {
         "Citi",
         "Citi",
         "Life Storage",
-        "M&T Bank"
+        "M&T Bank", 
+        "Life Storage",
     ]
 
     const titlesArray = ["Student",
@@ -42,7 +43,10 @@ export default function Experience() {
         "Credit & Portfolio Analyst",
         "Equity Research Associate",
         "Financial Analyst",
-        "Product Manager"]
+        "Product Manager",
+        "Senior Financial Analyst",
+    
+    ]
 
     const datesArray = ["2008-2012",
         "2012-2014",
@@ -50,7 +54,8 @@ export default function Experience() {
         "2014-2015",
         "2015-2017",
         "2017-2018",
-        "2018-Present",
+        "2018-2021",
+        "2021-Present",
     ]
 
     const DutiesArray = ["Bachelor of Science, Finance, minor in Economics",
@@ -59,7 +64,8 @@ export default function Experience() {
         "Analyze the credit worthiness of select corporate browerers within the  Energy sector, Chemicals industry, and Metals and Mining industry",
         "Responsible for company- and industry-specific research within the U.S. Auto OEM and Auto Parts industry",
         "Support the company’s third party management platform from initial contact with real estate developers to the annual budgeting process for their store(s)",
-        "Make recommendations on product pricing and strategy to drive origination volume and profit margin. Developed several applications in Python and JS, HTML5, CSS3"
+        "Make recommendations on product pricing and strategy to drive origination volume and profit margin. Developed several applications in Python and JS, HTML5, CSS3",
+        "Projected asset financials and supported decisions on investment-worthiness"
 
     ]
 

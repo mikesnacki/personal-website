@@ -21,17 +21,17 @@ export default function About() {
                 <div className={`flex-col`}>
                     <h2 className="align-center ">Live</h2>
                     <FaHome size={iconSize} />
-                    <p className="align-center ">My wife and I live in Buffalo, NY</p>
+                    <p className="align-center ">My family and I live in the Rochester, NY area</p>
                 </div>
                 <div className={`flex-col`}>
                     <h2 className="align-center ">Work</h2>
                     <FaUniversity size={iconSize} />
-                    <p className="align-center ">I work as a Product Manager</p>
+                    <p className="align-center ">I work as a Senior Financial Analyst</p>
                 </div>
                 <div className={`flex-col`}>
                     <h2 className="align-center ">Fun</h2>
                     <FaClock size={iconSize} />
-                    <p className="align-center ">In my free time, I enjoy programming, walking my dogs, cooking, and running</p>
+                    <p className="align-center ">In my free time, I enjoy programming, walking my dogs, cooking, and lifting weights</p>
                 </div>
                 <div className={`flex-col`} >
                     <h2 className="align-center ">Code</h2>
