@@ -111,7 +111,7 @@ export default function Experience() {
                 <div className="align-center exp-header">
                     <h2 className="align-center">Career Timeline</h2>
                     <Bar className="flex-row space-around">
-                        {[...Array(7)].map((x, i) =>
+                        {[...Array(8)].map((x, i) =>
                             <button
                                 className="button-experience"
                                 key={i}
