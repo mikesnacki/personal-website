@@ -19,7 +19,7 @@ import {
 export default function Experience() {
 
     const { width } = useWindowDimensions();
-    const [jobs, setJobs] = useState(6)
+    const [jobs, setJobs] = useState(7)
     const expRef = useRef();
     const expOnSCreen = useOnScreen(expRef, "-100px")
 
@@ -65,7 +65,7 @@ export default function Experience() {
         "Responsible for company- and industry-specific research within the U.S. Auto OEM and Auto Parts industry",
         "Support the company’s third party management platform from initial contact with real estate developers to the annual budgeting process for their store(s)",
         "Make recommendations on product pricing and strategy to drive origination volume and profit margin. Developed several applications in Python and JS, HTML5, CSS3",
-        "Projected asset financials and supported decisions on investment-worthiness"
+        "Projected the financials of over 280 properties representing over $6 billion in property value to determine investment-worthiness based on forward capitalization rates, income waterfalls, and IRR"
 
     ]
 
